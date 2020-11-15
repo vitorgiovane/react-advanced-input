@@ -3,8 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TextField from '@material-ui/core/TextField';
 
-import TimeInput from '../';
-// import TimeInput from '../src';
+// import TimeInput from '../'
+import TimeInput from '../src'
 
 class App extends React.Component {
   constructor() {

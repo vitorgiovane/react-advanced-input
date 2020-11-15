@@ -125,6 +125,16 @@ interface State {
 }
 
 export default class TimeInput extends React.Component<Props, State> {
+  static defaultProps: Props = {
+    showSeconds: false,
+    input: null,
+    style: {},
+    colon: DEFAULT_COLON,
+    maxHours: 23,
+    maxMinutes: 59,
+    maxSeconds: 59
+  }
+
   constructor(props: Props) {
     super(props)
 
