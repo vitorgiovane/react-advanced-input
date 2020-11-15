@@ -1,7 +1,7 @@
 {
   "name": "react-advanced-input-time",
   "version": "1.0.0",
-  "description": "Simple React time input field",
+  "description": "Advanced React time input time, based in react-simple-timefield.",
   "author": "Vitor Giovane <vitorgpalves@gmail.com>",
   "license": "MIT",
   "main": "index.js",

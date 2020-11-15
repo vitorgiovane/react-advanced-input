@@ -22,7 +22,7 @@ yarn add react-advanced-input-time
 
 ## Usage
 ```jsx
-import TimeField from 'react-simple-timefield';
+import TimeField from 'react-advanced-input-time';
 ...
 <TimeField
     value={time}                       // {String}   required, format '00:00' or '00:00:00'
@@ -39,7 +39,7 @@ import TimeField from 'react-simple-timefield';
 
 ## Real world example
 ```jsx
-import TimeField from 'react-simple-timefield';
+import TimeField from 'react-advanced-input-time';
 
 class App extends React.Component {
   constructor(...args) {
