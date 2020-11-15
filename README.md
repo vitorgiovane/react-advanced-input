@@ -1,20 +1,23 @@
-# react-simple-timefield
+# react-advanced-input
 
-Simple React time input field, check out [demo](https://antonfisher.com/react-simple-timefield/).
+Advanced React time input field, based in [react-advanced-input](https://github.com/vitorgiovane/advanced-input/).
 
-[![Build Status](https://travis-ci.org/antonfisher/react-simple-timefield.svg?branch=master)](https://travis-ci.org/antonfisher/react-simple-timefield)
-[![Coverage Status](https://coveralls.io/repos/github/antonfisher/react-simple-timefield/badge.svg?branch=master)](https://coveralls.io/github/antonfisher/react-simple-timefield?branch=master)
-[![npm](https://img.shields.io/npm/dt/react-simple-timefield.svg?colorB=brightgreen)](https://www.npmjs.com/package/react-simple-timefield)
-[![npm](https://img.shields.io/npm/v/react-simple-timefield.svg?colorB=brightgreen)](https://www.npmjs.com/package/react-simple-timefield)
-[![GitHub license](https://img.shields.io/github/license/antonfisher/react-simple-timefield.svg)](https://github.com/antonfisher/react-simple-timefield/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/dt/react-advanced-input.svg?colorB=brightgreen)](https://www.npmjs.com/package/react-advanced-input)
+[![npm](https://img.shields.io/npm/v/react-advanced-input.svg?colorB=brightgreen)](https://www.npmjs.com/package/react-advanced-input)
+[![GitHub license](https://img.shields.io/github/license/vitorgiovane/react-advanced-input.svg)](https://github.com/vitorgiovane/react-advanced-input/blob/master/LICENSE)
 
 [![Demo](docs/demo.gif)](https://antonfisher.com/react-simple-timefield/)
 
 ## Installation
+### With NPM
 ```bash
-npm install --save react-simple-timefield
+npm install --save react-advanced-input
 
-#for React <16 use: npm install --save react-simple-timefield@1
+#for React <16 use: npm install --save react-advanced-input@1
+```
+### With Yarn
+```
+yarn add react-advanced-input
 ```
 
 ## Usage
@@ -28,6 +31,9 @@ import TimeField from 'react-simple-timefield';
     inputRef={(ref) => {...}}          // {Function} input's ref
     colon=":"                          // {String}   default: ":"
     showSeconds                        // {Boolean}  default: false
+    maxHours                           // {Integer}  default: 23
+    maxMinutes                         // {Integer}  default: 59
+    maxSeconds                         // {Integer}  default: 59
 />
 ```
 

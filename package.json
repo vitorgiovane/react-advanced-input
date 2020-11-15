@@ -1,6 +1,6 @@
 {
-  "name": "react-simple-timefield",
-  "version": "3.2.3",
+  "name": "react-timefield",
+  "version": "1.0.0",
   "description": "Simple React time input field",
   "author": "Vitor Giovane <vitorgpalves@gmail.com>",
   "license": "MIT",
