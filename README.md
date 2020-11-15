@@ -1,28 +1,28 @@
-# react-advanced-input-time
+# react-advanced-time-input
 
 Advanced React time input time, based in [react-simple-timefield](https://github.com/antonfisher/react-simple-timefield).
 
-[![npm](https://img.shields.io/npm/dt/react-advanced-input-time.svg?colorB=brightgreen)](https://www.npmjs.com/package/react-advanced-input-time)
-[![npm](https://img.shields.io/npm/v/react-advanced-input-time.svg?colorB=brightgreen)](https://www.npmjs.com/package/react-advanced-input-time)
-[![GitHub license](https://img.shields.io/github/license/vitorgiovane/react-advanced-input-time.svg)](https://github.com/vitorgiovane/react-advanced-input-time/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/dt/react-advanced-time-input.svg?colorB=brightgreen)](https://www.npmjs.com/package/react-advanced-time-input)
+[![npm](https://img.shields.io/npm/v/react-advanced-time-input.svg?colorB=brightgreen)](https://www.npmjs.com/package/react-advanced-time-input)
+[![GitHub license](https://img.shields.io/github/license/vitorgiovane/react-advanced-time-input.svg)](https://github.com/vitorgiovane/react-advanced-time-input/blob/master/LICENSE)
 
 [![Demo](docs/demo.gif)](https://antonfisher.com/react-simple-timefield/)
 
 ## Installation
 ### With NPM
 ```bash
-npm install --save react-advanced-input-time
+npm install --save react-advanced-time-input
 
-#for React <16 use: npm install --save react-advanced-input-time@1
+#for React <16 use: npm install --save react-advanced-time-input@1
 ```
 ### With Yarn
 ```
-yarn add react-advanced-input-time
+yarn add react-advanced-time-input
 ```
 
 ## Usage
 ```jsx
-import TimeField from 'react-advanced-input-time';
+import TimeField from 'react-advanced-time-input';
 ...
 <TimeField
     value={time}                       // {String}   required, format '00:00' or '00:00:00'
@@ -39,7 +39,7 @@ import TimeField from 'react-advanced-input-time';
 
 ## Real world example
 ```jsx
-import TimeField from 'react-advanced-input-time';
+import TimeField from 'react-advanced-time-input';
 
 class App extends React.Component {
   constructor(...args) {
