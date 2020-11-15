@@ -22,9 +22,9 @@ yarn add react-advanced-time-input
 
 ## Usage
 ```jsx
-import TimeField from 'react-advanced-time-input';
+import TimeInput from 'react-advanced-time-input';
 ...
-<TimeField
+<TimeInput
     value={time}                       // {String}   required, format '00:00' or '00:00:00'
     onChange={(event, value) => {...}} // {Function} required
     input={<MyCustomInputElement />}   // {Element}  default: <input type="text" />
@@ -39,7 +39,7 @@ import TimeField from 'react-advanced-time-input';
 
 ## Real world example
 ```jsx
-import TimeField from 'react-advanced-time-input';
+import TimeInput from 'react-advanced-time-input';
 
 class App extends React.Component {
   constructor(...args) {
@@ -60,7 +60,7 @@ class App extends React.Component {
     const {time} = this.state;
 
     return (
-      <TimeField value={time} onChange={this.onTimeChange} />
+      <TimeInput value={time} onChange={this.onTimeChange} />
     );
   }
 }
@@ -73,10 +73,10 @@ The `onChange` callback property will be called with two arguments.
 
 ```jsx
 // Before:
-<TimeField onChange={(value) => console.log(value)} />
+<TimeInput onChange={(value) => console.log(value)} />
 
 // After:
-<TimeField onChange={(event, value) => console.log(event, value)} />
+<TimeInput onChange={(event, value) => console.log(event, value)} />
 ```
 
 ## Contributing
@@ -84,9 +84,9 @@ The `onChange` callback property will be called with two arguments.
 #### Run demo:
 For running demo locally, replace:
 ```javascript
-import TimeField from '../';
+import TimeInput from '../';
 // to
-import TimeField from '../src';
+import TimeInput from '../src';
 ```
 in `demo/index.tsx` file.
 
