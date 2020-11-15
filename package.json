@@ -2,7 +2,7 @@
   "name": "react-simple-timefield",
   "version": "3.2.3",
   "description": "Simple React time input field",
-  "author": "Anton Fisher <a.fschr@gmail.com> (http://antonfisher.com)",
+  "author": "Vitor Giovane <vitorgpalves@gmail.com>",
   "license": "MIT",
   "main": "index.js",
   "typings": "dist/index.d.ts",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antonfisher/react-simple-timefield.git"
+    "url": "git+https://github.com/vitorgiovane/react-simple-timefield.git"
   },
   "keywords": [
     "react",
@@ -32,9 +32,9 @@
     "input"
   ],
   "bugs": {
-    "url": "https://github.com/antonfisher/react-simple-timefield/issues"
+    "url": "https://github.com/vitorgiovane/react-simple-timefield/issues"
   },
-  "homepage": "https://github.com/antonfisher/react-simple-timefield#readme",
+  "homepage": "https://github.com/vitorgiovane/react-simple-timefield#readme",
   "jest": {
     "setupTestFrameworkScriptFile": "./tests/setup.js"
   },
@@ -82,7 +82,8 @@
   },
   "contributors": [
     "Anton Fisher (https://github.com/antonfisher)",
-    "Nicholas Yang (https://github.com/NicholasLYang)"
+    "Nicholas Yang (https://github.com/NicholasLYang)",
+    "Vitor Giovane (https://github.com/vitorgiovane)"
   ],
   "directories": {
     "doc": "docs",
