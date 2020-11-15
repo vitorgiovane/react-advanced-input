@@ -1,23 +1,23 @@
-# react-advanced-input
+# react-advanced-input-time
 
-Advanced React time input field, based in [react-advanced-input](https://github.com/vitorgiovane/advanced-input/).
+Advanced React time input time, based in [react-simple-timefield](https://github.com/antonfisher/react-simple-timefield).
 
-[![npm](https://img.shields.io/npm/dt/react-advanced-input.svg?colorB=brightgreen)](https://www.npmjs.com/package/react-advanced-input)
-[![npm](https://img.shields.io/npm/v/react-advanced-input.svg?colorB=brightgreen)](https://www.npmjs.com/package/react-advanced-input)
-[![GitHub license](https://img.shields.io/github/license/vitorgiovane/react-advanced-input.svg)](https://github.com/vitorgiovane/react-advanced-input/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/dt/react-advanced-input-time.svg?colorB=brightgreen)](https://www.npmjs.com/package/react-advanced-input-time)
+[![npm](https://img.shields.io/npm/v/react-advanced-input-time.svg?colorB=brightgreen)](https://www.npmjs.com/package/react-advanced-input-time)
+[![GitHub license](https://img.shields.io/github/license/vitorgiovane/react-advanced-input-time.svg)](https://github.com/vitorgiovane/react-advanced-input-time/blob/master/LICENSE)
 
 [![Demo](docs/demo.gif)](https://antonfisher.com/react-simple-timefield/)
 
 ## Installation
 ### With NPM
 ```bash
-npm install --save react-advanced-input
+npm install --save react-advanced-input-time
 
-#for React <16 use: npm install --save react-advanced-input@1
+#for React <16 use: npm install --save react-advanced-input-time@1
 ```
 ### With Yarn
 ```
-yarn add react-advanced-input
+yarn add react-advanced-input-time
 ```
 
 ## Usage
