@@ -3,8 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TextField from '@material-ui/core/TextField';
 
-// import TimeField from '../';
-import TimeField from '../src';
+import TimeInput from '../';
+// import TimeInput from '../src';
 
 class App extends React.Component {
   constructor() {
@@ -35,7 +35,7 @@ class App extends React.Component {
       <section className="container">
         <h2>Default input:</h2>
         <section>
-          <TimeField
+          <TimeInput
             value={time}
             onChange={this.onTimeChange}
             style={{
@@ -51,7 +51,7 @@ class App extends React.Component {
         </section>
         <h2>Show seconds:</h2>
         <section>
-          <TimeField
+          <TimeInput
             showSeconds
             value={timeSeconds}
             onChange={this.onTimeChange}
@@ -70,7 +70,7 @@ class App extends React.Component {
         </section>
         <h2>Custom colon:</h2>
         <section>
-          <TimeField
+          <TimeInput
             showSeconds
             colon="-"
             value={timeSecondsCustomColon}
@@ -89,7 +89,7 @@ class App extends React.Component {
         <h2>React Material-UI:</h2>
         <section>
           <div style={{ marginRight: 20 }}>
-            <TimeField
+            <TimeInput
               showSeconds
               value={timeSeconds}
               onChange={this.onTimeChange}

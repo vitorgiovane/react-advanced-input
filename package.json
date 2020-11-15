@@ -1,6 +1,6 @@
 {
-  "name": "react-advanced-input-time",
-  "version": "1.0.1",
+  "name": "react-advanced-time-input",
+  "version": "1.0.0",
   "description": "Advanced React time input time, based in react-simple-timefield.",
   "author": "Vitor Giovane <vitorgpalves@gmail.com>",
   "license": "MIT",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vitorgiovane/react-advanced-input-time.git"
+    "url": "git+https://github.com/vitorgiovane/react-advanced-time-input.git"
   },
   "keywords": [
     "react",
@@ -32,9 +32,9 @@
     "input"
   ],
   "bugs": {
-    "url": "https://github.com/vitorgiovane/react-advanced-input-time/issues"
+    "url": "https://github.com/vitorgiovane/react-advanced-time-input/issues"
   },
-  "homepage": "https://github.com/vitorgiovane/react-advanced-input-time#readme",
+  "homepage": "https://github.com/vitorgiovane/react-advanced-time-input#readme",
   "jest": {
     "setupTestFrameworkScriptFile": "./tests/setup.js"
   },

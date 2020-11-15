@@ -124,7 +124,7 @@ interface State {
   _maxSeconds?: number
 }
 
-export default class TimeField extends React.Component<Props, State> {
+export default class TimeInput extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props)
 
