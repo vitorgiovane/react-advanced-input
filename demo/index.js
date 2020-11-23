@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import TextField from '@material-ui/core/TextField';
 
 // import TimeInput from '../'
-import TimeInput from '../src'
+import TimeInput from '../src';
 
 class App extends React.Component {
   constructor() {
@@ -25,11 +25,11 @@ class App extends React.Component {
     const timeSeconds = newTime.padEnd(8, this.state.timeSeconds.substr(5, 3));
     const timeSecondsCustomColon = timeSeconds.replace(/:/g, '-');
 
-    this.setState({ time, timeSeconds, timeSecondsCustomColon });
+    this.setState({time, timeSeconds, timeSecondsCustomColon});
   }
 
   render() {
-    const { time, timeSeconds, timeSecondsCustomColon } = this.state;
+    const {time, timeSeconds, timeSecondsCustomColon} = this.state;
 
     return (
       <section className="container">
@@ -88,18 +88,18 @@ class App extends React.Component {
         </section>
         <h2>React Material-UI:</h2>
         <section>
-          <div style={{ marginRight: 20 }}>
+          <div style={{marginRight: 20}}>
             <TimeInput
               showSeconds
               value={timeSeconds}
               onChange={this.onTimeChange}
-              style={{ width: 88 }}
+              style={{width: 88}}
               input={<TextField label="Name" value={timeSeconds} variant="outlined" />}
             />
           </div>
         </section>
       </section>
-    )
+    );
   }
 }
 
