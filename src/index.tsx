@@ -1,4 +1,4 @@
-import React, { ChangeEvent, CSSProperties, ReactElement } from 'react'
+import React, { ChangeEvent, CSSProperties, ReactElement, FocusEvent } from 'react'
 
 const DEFAULT_COLON = ':'
 const DEFAULT_VALUE_SHORT = `00${DEFAULT_COLON}00`
@@ -103,6 +103,8 @@ type onChangeType = (event: ChangeEvent<HTMLInputElement>, value: string) => voi
 interface Props {
   value?: string
   onChange?: onChangeType
+  onFocus?: (event: FocusEvent<HTMLInputElement>) =>  void
+  onBlur?: (event: FocusEvent<HTMLInputElement>) =>  void
   showSeconds?: boolean
   input: ReactElement | null
   inputRef?: () => HTMLInputElement | null
@@ -268,7 +270,7 @@ export default class TimeInput extends React.Component<Props, State> {
 
   render(): ReactElement {
     const { value } = this.state
-    const { onChange, style, showSeconds, input, inputRef, colon, maxHours, maxMinutes, maxSeconds, ...props } = this.props //eslint-disable-line no-unused-vars
+    const { onChange, onFocus, onBlur, style, showSeconds, input, inputRef, colon, maxHours, maxMinutes, maxSeconds, ...props } = this.props
     const onChangeHandler = (event: ChangeEvent<HTMLInputElement>) =>
       this.onInputChange(event, (e: ChangeEvent<HTMLInputElement>, v: string) => onChange && onChange(e, v))
 
@@ -288,6 +290,8 @@ export default class TimeInput extends React.Component<Props, State> {
         ref={inputRef}
         value={value}
         onChange={onChangeHandler}
+        onFocus={(event) => onFocus && onFocus(event)}
+        onBlur={(event) => onBlur && onBlur(event)}
         style={{ width: showSeconds ? 54 : 35, ...style }}
       />
     )
