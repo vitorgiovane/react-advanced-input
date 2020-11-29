@@ -4,12 +4,12 @@ const DEFAULT_COLON = ':'
 const DEFAULT_VALUE_SHORT = `00${DEFAULT_COLON}00`
 const DEFAULT_VALUE_FULL = `00${DEFAULT_COLON}00${DEFAULT_COLON}00`
 
-export function isNumber<T>(value: T): boolean {
+export function isNumber<T> (value: T): boolean {
   const number = Number(value)
   return !isNaN(number) && String(value) === String(number)
 }
 
-export function formatTimeItem(value?: string | number): string {
+export function formatTimeItem (value?: string | number): string {
   return `${value || ''}00`.substr(0, 2)
 }
 
@@ -18,7 +18,7 @@ interface DecimalBlock {
   newCursorBlockPosition: number
 }
 
-function buildDecimalPlace(
+function buildDecimalPlace (
   oldDecimalBlock: string,
   newDecimalBlock: string,
   maxDecimalBlock: number,
@@ -50,7 +50,7 @@ function buildDecimalPlace(
   return { newDecimalBlock, newCursorBlockPosition }
 }
 
-export function validateTimeAndCursor(
+export function validateTimeAndCursor (
   showSeconds = false,
   value = '',
   defaultValue = '',
@@ -103,8 +103,9 @@ type onChangeType = (event: ChangeEvent<HTMLInputElement>, value: string) => voi
 interface Props {
   value?: string
   onChange?: onChangeType
-  onFocus?: (event: FocusEvent<HTMLInputElement>) =>  void
-  onBlur?: (event: FocusEvent<HTMLInputElement>) =>  void
+  onFocus?: (event: FocusEvent<HTMLInputElement>) => void
+  onBlur?: (event: FocusEvent<HTMLInputElement>) => void
+  onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void
   showSeconds?: boolean
   input: ReactElement | null
   inputRef?: () => HTMLInputElement | null
@@ -137,7 +138,7 @@ export default class TimeInput extends React.Component<Props, State> {
     maxSeconds: 59
   }
 
-  constructor(props: Props) {
+  constructor (props: Props) {
     super(props)
 
     const _showSeconds = Boolean(props.showSeconds)
@@ -169,7 +170,7 @@ export default class TimeInput extends React.Component<Props, State> {
     this.onInputChange = this.onInputChange.bind(this)
   }
 
-  componentDidUpdate(prevProps: Props): void {
+  componentDidUpdate (prevProps: Props): void {
     if (this.props.value !== prevProps.value) {
       const [validatedTime] = validateTimeAndCursor(
         this.state._showSeconds,
@@ -188,7 +189,7 @@ export default class TimeInput extends React.Component<Props, State> {
     }
   }
 
-  onInputChange(event: ChangeEvent<HTMLInputElement>, callback: onChangeType): void {
+  onInputChange (event: ChangeEvent<HTMLInputElement>, callback: onChangeType): void {
     const oldValue = this.state.value
     const inputEl = event.target
     const inputValue = inputEl.value
@@ -268,9 +269,23 @@ export default class TimeInput extends React.Component<Props, State> {
     event.persist()
   }
 
-  render(): ReactElement {
+  render (): ReactElement {
     const { value } = this.state
-    const { onChange, onFocus, onBlur, style, showSeconds, input, inputRef, colon, maxHours, maxMinutes, maxSeconds, ...props } = this.props
+    const {
+      onChange,
+      onFocus,
+      onKeyDown,
+      onBlur,
+      style,
+      showSeconds,
+      input,
+      inputRef,
+      colon,
+      maxHours,
+      maxMinutes,
+      maxSeconds,
+      ...props
+    } = this.props
     const onChangeHandler = (event: ChangeEvent<HTMLInputElement>) =>
       this.onInputChange(event, (e: ChangeEvent<HTMLInputElement>, v: string) => onChange && onChange(e, v))
 
@@ -290,6 +305,7 @@ export default class TimeInput extends React.Component<Props, State> {
         ref={inputRef}
         value={value}
         onChange={onChangeHandler}
+        onKeyDown={(event) => onKeyDown && onKeyDown(event)}
         onFocus={(event) => onFocus && onFocus(event)}
         onBlur={(event) => onBlur && onBlur(event)}
         style={{ width: showSeconds ? 54 : 35, ...style }}
